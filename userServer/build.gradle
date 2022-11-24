@@ -1,0 +1,96 @@
+buildscript {
+    ext {
+        queryDslVersion = "5.0.0"
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    //querydsl 추가
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+}
+
+group = 'com.ssafy'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    implementation 'org.json:json:20190722'
+
+    implementation group: 'org.javassist', name: 'javassist', version: '3.18.2-GA'
+
+    // json
+    implementation 'net.sf.json-lib:json-lib:2.4:jdk15'
+    implementation group: 'org.json', name: 'json', version: '20201115'
+    // gson
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    // QueryDSL
+    //querydsl 추가
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
+
+//    implementation 'org.hibernate:hibernate-entitymanager:4.3.10.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.2.2.Final'
+
+//    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.2.Final'
+// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+
+    //캐시 사용
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
+
+}
+
+def querydslDir = "$buildDir/generated/querydsl"
+
+querydsl {
+    jpa = true
+    querydslSourcesDir = querydslDir
+}
+sourceSets {
+    main.java.srcDir querydslDir
+}
+compileQuerydsl{
+    options.annotationProcessorPath = configurations.querydsl
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    querydsl.extendsFrom compileClasspath
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+bootJar{
+    archivesBaseName = 'pomos4'
+    archiveFileName = 'pomos4.jar'
+    archiveVersion = "0.0.0"
+}
