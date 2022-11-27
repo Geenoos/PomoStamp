@@ -59,18 +59,23 @@
 ---
 
 - Server: AWS EC2 Ubuntu 20.04 LTS
-- Python: 3.9.13
-- MySQL: 8.0.30
-- Storage: AWS S3
-- FastAPI: 0.82.0
-- Django: 3.2 LTS
-- Pytorch: 1.12.1
-- Anaconda: 3.9
-- node.js: 16.17.0 (LTS)
-- React-Native: 0.69
-- Android Studio: Chipmunk 2021.2.1 Patch 2
-- React-query v4.2.3
+- Python: 3.8.10
+- Redis: 7.0.4
+- Java: open-JDK zulu 8.33.0.1
+- MySQL: 8.0.29
+- API Test - Postman
+- node.js: 16.16.0 (LTS)
+- React: 18.2.0
+- Recoil: 0.7.4
+- React-query v4.0.10
+- MUI: v5.*
+- openvidu: 2.22.0
 - VSCode: Stable Build
+- PyCharm 22.1.4
+- IntelliJ version 22.1.3
+- MySQL Workbench: Stable Build
+- FTP(File Transfer Protocol): FileZilla
+- SSH client - Xshell
 - Nginx: 1.18.0
 
 
