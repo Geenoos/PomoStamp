@@ -69,10 +69,10 @@
 - React-query: 4.0.10
 - MUI: v5.*
 - openvidu: 2.22.0
+- Nginx: 1.18.0
 - VSCode: Stable Build
 - PyCharm: 22.1.4
 - IntelliJ version: 22.1.3
-- Nginx: 1.18.0
 - MySQL Workbench: Stable Build
 - FTP(File Transfer Protocol): FileZilla
 - SSH client: Xshell
