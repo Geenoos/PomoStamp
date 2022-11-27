@@ -63,20 +63,21 @@
 - Redis: 7.0.4
 - Java: open-JDK zulu 8.33.0.1
 - MySQL: 8.0.29
-- API Test - Postman
 - node.js: 16.16.0 (LTS)
 - React: 18.2.0
 - Recoil: 0.7.4
-- React-query v4.0.10
+- React-query: 4.0.10
 - MUI: v5.*
 - openvidu: 2.22.0
 - VSCode: Stable Build
-- PyCharm 22.1.4
-- IntelliJ version 22.1.3
+- PyCharm: 22.1.4
+- IntelliJ version: 22.1.3
+- Nginx: 1.18.0
 - MySQL Workbench: Stable Build
 - FTP(File Transfer Protocol): FileZilla
-- SSH client - Xshell
-- Nginx: 1.18.0
+- SSH client: Xshell
+- API Test: Postman
+
 
 
 
