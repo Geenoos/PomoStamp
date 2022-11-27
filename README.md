@@ -79,6 +79,8 @@
 
 ---
 
+![image](https://user-images.githubusercontent.com/34851254/204149946-00de983e-52c7-421c-a45c-749414196394.png)
+![image](https://user-images.githubusercontent.com/34851254/204149961-a5026480-8956-4fa8-ad09-495ca228db47.png)
 
 
 
@@ -88,8 +90,6 @@
 # 팀 소개
 
 ---
-
-
 
 ## 팀원 소개 
 
@@ -106,7 +106,7 @@
 ## 역할 분배
 
 ---
-
+![image](https://user-images.githubusercontent.com/34851254/204149995-cb30b78a-66e7-4e07-b0a5-6632c955801f.png)
 
 
 
